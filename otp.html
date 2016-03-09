@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>MOBILE APP</title>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<script src="js/jquery.min.js"></script>
+<script src="js/register.js"></script>
+<script>
+$("document").ready(function(){
+$("#register").click(function(){
+$.ajax({
+type:'post',
+url:'save.php',
+data:'name='+name+'&email='+email+'&mobile='+mobile,
+cache:false,
+success:function(returndata){
+alert(returndata);
+}
+							
+});
+});
+});
+
+
+</script>
+<body>
+<table align="center" width="50%" cellspacing="0px" cellpadding="0px" >
+<tr>
+<td class="tf" valign="bottom"><img valign="bottom" height="60px"width="18%" src="icon3.png"></td>
+</tr>
+<tr>
+<td class="t" valign="top"><marquee>One Time Password</marquee></td>
+</tr>
+<tr>
+<td>
+<table id="msg" class="h" align="center" width="100%" cellpadding="0px" cellspacing="0px"  height="170px">
+<tr>
+<td class="f" align="center" width="100%"><h1>OTP</h1>
+<div>Your opt is <span></span></div>
+<div>
+<input type="text" name="Register">
+</div></td>
+<tr>
+	
+				<td height="20px" align="center" width="10%px"><input type="button" value="Register" id="register" /></td>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td id="foot" class="tf" align="center">SHOPSPRING</td>
+</tr>
+</table>
+</body>
+</html>
