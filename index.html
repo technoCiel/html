@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>MOBILE APP</title>
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<script src="js/jquery.min.js"> </script>
+<script>
+$("document").ready(function(){
+$("h1").hide();
+setTimeout(function(){
+   $("h1").show();
+	$("#img").animate({
+                     height:'+=150px',
+                      width:'+=150px',
+                      opacity:'0.5px'             
+			})
+			},2000);
+setTimeout(function(){
+window.location="register.html";
+},4000);
+//$("h1").toggle("slow");
+//$("#showdata").load("register.html");
+});
+</script>
+<body>
+<table align="center" width="50%" cellspacing="0px" cellpadding="0px" >
+<tr>
+<td class="tf" valign="bottom"><img valign="bottom" height="60px"width="18%" src="icon3.png"></td>
+</tr>
+<tr><td class="tm" align="center"><img id="img" align="center" src="icon3.png"></td>
+</tr>
+<tr>
+<td class="te" align="center"><h1>WELCOME</h1></td>
+</tr>
+<tr>
+<td id="foot" class="tf" align="center">SHOPSPRING</td>
+</tr>
+</table>
+</table>
+</body>
+</html>
